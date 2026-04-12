@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:martendb.io)",
+      "WebFetch(domain:fast-endpoints.com)",
+      "WebFetch(domain:docs.permify.co)"
+    ]
+  }
+}
