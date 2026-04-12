@@ -1,0 +1,60 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "en-US"
+early_access: false
+tone_instructions: >-
+  Review C# and .NET pull requests with concise, actionable feedback. Prioritize
+  correctness, public API stability, nullability, async behavior, exception
+  handling, and maintainability over minor style preferences.
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: false
+  high_level_summary: true
+  review_status: true
+  review_details: false
+  collapse_walkthrough: true
+  changed_files_summary: true
+  sequence_diagrams: false
+  estimate_code_review_effort: true
+  suggested_labels: false
+  suggested_reviewers: false
+  poem: false
+  enable_prompt_for_ai_agents: true
+  auto_review:
+    enabled: true
+    drafts: false
+    auto_incremental_review: true
+    ignore_title_keywords:
+      - "WIP"
+      - "DO NOT REVIEW"
+  path_filters:
+    - "!**/.vs/**"
+    - "!**/bin/**"
+    - "!**/obj/**"
+    - "!**/Debug/**"
+    - "!**/Release/**"
+    - "!**/TestResults/**"
+    - "!**/BenchmarkDotNet.Artifacts/**"
+    - "!**/*.suo"
+    - "!**/*.user"
+    - "!**/*.rsuser"
+    - "!**/*.sln.docstates"
+    - "!**/*.coverage"
+    - "!**/*.coveragexml"
+    - "!**/*.nupkg"
+    - "!**/*.snupkg"
+  path_instructions:
+    - path: "**/*.cs"
+      instructions: >-
+        Review as C#/.NET library code. Focus on correctness, nullability,
+        cancellation handling, async/await misuse, exception boundaries,
+        allocation-heavy patterns on hot paths, and compatibility-breaking
+        changes to public APIs. Prefer actionable comments over style-only nits.
+    - path: "**/*Tests.cs"
+      instructions: >-
+        For test changes, focus on determinism, meaningful assertions, edge-case
+        coverage, and avoiding brittle timing- or environment-dependent tests.
+
+chat:
+  auto_reply: false
+  art: false

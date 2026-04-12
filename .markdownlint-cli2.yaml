@@ -1,0 +1,19 @@
+config:
+  default: true
+  line-length: false
+  no-duplicate-heading: false
+  table-column-style: false
+gitignore: true
+globs:
+  - '**/*.md'
+ignores:
+  - dist/**
+  - .agents/**
+  - .astro/**
+  - .claude/**
+  - .github/**
+  - .netlify/**
+  - .squad/**
+  - node_modules/**
+noBanner: true
+noProgress: true
