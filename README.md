@@ -1,6 +1,6 @@
-# TalbyCoreLibs
+# TalbyOrgs
 
-![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/TalbyAI/TalbyCoreLibs?utm_source=oss&utm_medium=github&utm_campaign=TalbyAI%2FTalbyCoreLibs&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
+![CodeRabbit Pull Request Reviews](https://img.shields.io/coderabbit/prs/github/talbyai/TalbyOrgs?utm_source=oss&utm_medium=github&utm_campaign=talbyai%2FTalbyOrgs&labelColor=171717&color=FF570A&link=https%3A%2F%2Fcoderabbit.ai&label=CodeRabbit+Reviews)
 
 ## Build Conventions
 
