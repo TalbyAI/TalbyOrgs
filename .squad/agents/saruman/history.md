@@ -7,11 +7,11 @@
 
 ## Core Context
 
-Scribe maintains TalbyOrgs V1 team memory, decisions, and session logs.
+Saruman provides advisory-only critique for TalbyOrgs V1 and does not own decisions.
 
 ## Recent Updates
 
-📌 Charter aligned to the confirmed roster on 2026-04-15.
+📌 Agent charter created on 2026-04-15.
 
 ## Learnings
 

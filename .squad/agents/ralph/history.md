@@ -1,16 +1,18 @@
 # Project Context
 
 - **Project:** TalbyOrgs
-- **Created:** 2026-04-15
+- **User:** Iskander
+- **Stack:** C#/.NET 10, ASP.NET Core REST, Microsoft Orleans, Marten, PostgreSQL
+- **Domain:** Internal service for organizations, projects, roles, membership, RBAC, idempotent workflows, projections, and privacy boundaries
 
 ## Core Context
 
-Agent Ralph initialized and ready for work.
+Ralph monitors TalbyOrgs V1 backlog flow, issue state, and PR movement.
 
 ## Recent Updates
 
-📌 Team initialized on 2026-04-15
+📌 Charter aligned to the confirmed roster on 2026-04-15.
 
 ## Learnings
 
-Initial setup complete.
+Initial context seeded from team roster and project context.
