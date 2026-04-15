@@ -1,0 +1,60 @@
+{
+  "agents": {
+    "architect": {
+      "persistent_name": "Gandalf",
+      "universe": "Lord of the Rings",
+      "created_at": "2026-04-15T20:18:00.8071161Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "lead": {
+      "persistent_name": "Aragorn",
+      "universe": "Lord of the Rings",
+      "created_at": "2026-04-15T20:18:00.8071161Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "junior": {
+      "persistent_name": "Pippin",
+      "universe": "Lord of the Rings",
+      "created_at": "2026-04-15T20:18:00.8071161Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "qa": {
+      "persistent_name": "Samwise",
+      "universe": "Lord of the Rings",
+      "created_at": "2026-04-15T20:18:00.8071161Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "security-advisor": {
+      "persistent_name": "Gimli",
+      "universe": "Lord of the Rings",
+      "created_at": "2026-04-15T20:18:00.8071161Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "dba": {
+      "persistent_name": "Elrond",
+      "universe": "Lord of the Rings",
+      "created_at": "2026-04-15T20:18:00.8071161Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "critic": {
+      "persistent_name": "Saruman",
+      "universe": "Lord of the Rings",
+      "created_at": "2026-04-15T20:18:00.8071161Z",
+      "legacy_named": false,
+      "status": "active"
+    },
+    "tech-writer": {
+      "persistent_name": "Bilbo",
+      "universe": "Lord of the Rings",
+      "created_at": "2026-04-15T20:18:00.8071161Z",
+      "legacy_named": false,
+      "status": "active"
+    }
+  }
+}

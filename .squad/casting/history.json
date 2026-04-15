@@ -1,0 +1,25 @@
+{
+  "universe_usage_history": [
+    {
+      "universe": "Lord of the Rings",
+      "assignment_id": "talbyorgs-2026-04-15-initial",
+      "used_at": "2026-04-15T20:18:00.8071161Z"
+    }
+  ],
+  "assignment_cast_snapshots": {
+    "talbyorgs-2026-04-15-initial": {
+      "universe": "Lord of the Rings",
+      "agents": {
+        "architect": "Gandalf",
+        "lead": "Aragorn",
+        "junior": "Pippin",
+        "qa": "Samwise",
+        "security-advisor": "Gimli",
+        "dba": "Elrond",
+        "critic": "Saruman",
+        "tech-writer": "Bilbo"
+      },
+      "created_at": "2026-04-15T20:18:00.8071161Z"
+    }
+  }
+}

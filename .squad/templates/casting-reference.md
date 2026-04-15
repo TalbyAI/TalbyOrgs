@@ -18,11 +18,12 @@ On-demand reference for Squad's casting system. Loaded during Init Mode or when 
 | The Simpsons | 20 | large, comedy, ensemble | satire, community, family, absurdity |
 | Breaking Bad | 12 | medium, drama, tension | chemistry, transformation, consequence, power |
 | Lost | 18 | large, mystery, ensemble | survival, mystery, groups, leadership |
+| Lord of the Rings | 18 | large, fantasy, epic | fellowship, stewardship, kingdoms, duty |
 | Marvel Cinematic Universe | 25 | large, action, ensemble | heroism, teamwork, powers, scale |
 | DC Universe | 18 | large, action, ensemble | justice, duality, powers, mythology |
 | Futurama | 12 | medium, sci-fi, comedy | future, robots, space, absurdity |
 
-**Total: 15 universes** — capacity range 6–25.
+**Total: 16 universes** — capacity range 6–25.
 
 ## Selection Algorithm
 
