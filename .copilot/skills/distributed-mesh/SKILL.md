@@ -3,7 +3,7 @@ name: "distributed-mesh"
 description: "How to coordinate with squads on different machines using git as transport"
 domain: "distributed-coordination"
 confidence: "high"
-source: "multi-model-consensus (Opus 4.6, Sonnet 4.5, GPT-5.4)"
+source: "multi-model-consensus (GPT-5.4, Claude Sonnet 4.6, Gemini 3.1 Pro)"
 ---
 
 ## SCOPE

@@ -11,20 +11,17 @@ All Ralphs fail simultaneously when the preferred model (e.g., `claude-sonnet-4.
 Premium models burn quota fast:
 | Model | Multiplier | Risk |
 |-------|-----------|------|
-| `claude-sonnet-4.6` | 1x | Moderate with many Ralphs |
-| `claude-opus-4.6` | 10x | High |
-| `gpt-5.4` | 50x | Very high |
-| `gpt-5.4-mini` | **0x** | **Free — unlimited** |
-| `gpt-5-mini` | **0x** | **Free — unlimited** |
-| `gpt-4.1` | **0x** | **Free — unlimited** |
+| `claude-sonnet-4.6` | 1x | Medium |
+| `gpt-5.4` | 1x | Medium |
+| `gpt-5.4-mini` | 0.33x | Low |
 
 ## Circuit Breaker States
 
 ```
-┌─────────┐   rate limit error    ┌────────┐
-│ CLOSED  │ ───────────────────►  │  OPEN  │
-│ (normal)│                       │(fallback)│
-└────┬────┘   ◄──────────────── └────┬────┘
+┌─────────┐   rate limit error   ┌──────────┐
+│ CLOSED  │ ───────────────────► │   OPEN   │
+│ (normal)│                     │(fallback)│
+└────┬────┘   ◄────────────────   └────┬─────┘
      │        2 consecutive          │
      │        successes              │ cooldown expires
      │                               ▼
@@ -40,10 +37,10 @@ Premium models burn quota fast:
 - On rate limit error → transition to OPEN
 
 ### OPEN (rate limited — fallback active)
-- Fall back through the free-tier model chain:
-  1. `gpt-5.4-mini`
-  2. `gpt-5-mini`
-  3. `gpt-4.1`
+- Fall back through the approved model chain:
+    1. `gpt-5.4-mini`
+    2. `claude-sonnet-4.6`
+    3. `gpt-5.4`
 - Start cooldown timer (default: 10 minutes)
 - When cooldown expires → transition to HALF-OPEN
 
@@ -58,7 +55,7 @@ Premium models burn quota fast:
 {
   "state": "closed",
   "preferredModel": "claude-sonnet-4.6",
-  "fallbackChain": ["gpt-5.4-mini", "gpt-5-mini", "gpt-4.1"],
+    "fallbackChain": ["gpt-5.4-mini", "claude-sonnet-4.6", "gpt-5.4"],
   "currentFallbackIndex": 0,
   "cooldownMinutes": 10,
   "openedAt": null,
@@ -87,7 +84,7 @@ function Get-CircuitBreakerState {
         $default = @{
             state              = "closed"
             preferredModel     = "claude-sonnet-4.6"
-            fallbackChain      = @("gpt-5.4-mini", "gpt-5-mini", "gpt-4.1")
+            fallbackChain      = @("gpt-5.4-mini", "claude-sonnet-4.6", "gpt-5.4")
             currentFallbackIndex = 0
             cooldownMinutes    = 10
             openedAt           = $null
@@ -294,7 +291,7 @@ Override defaults by editing `.squad/ralph-circuit-breaker.json`:
 | Field | Default | Description |
 |-------|---------|-------------|
 | `preferredModel` | `claude-sonnet-4.6` | Model to use when circuit is closed |
-| `fallbackChain` | `["gpt-5.4-mini", "gpt-5-mini", "gpt-4.1"]` | Ordered fallback models (all free-tier) |
+| `fallbackChain` | `["gpt-5.4-mini", "claude-sonnet-4.6", "gpt-5.4"]` | Ordered fallback models using the approved set |
 | `cooldownMinutes` | `10` | How long to wait before testing recovery |
 
 ## Metrics
